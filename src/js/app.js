@@ -20,3 +20,21 @@ teamSet.addAll(bowman, daemon, magician, swordsman, undead, zombie); // доба
 for (const obj of teamSet) {
   console.log(obj);
 }
+
+const generator = teamSet[Symbol.iterator]();
+
+console.log('generator.next(): ', generator.next()); // {value: Bowman, done: false}
+console.log('generator.next(): ', generator.next()); // {value: Daemon, done: false}
+console.log('generator.next(): ', generator.next()); // {value: Magician, done: false}
+console.log('generator.next(): ', generator.next()); // {value: Swordsman, done: false}
+console.log('generator.next(): ', generator.next()); // {value: Undead, done: false}
+console.log('generator.next(): ', generator.next()); // {value: Zombie, done: false}
+console.log('Лишний generator.next(): ', generator.next()); // {value: undefined, done: true}
+
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log(generator.next().value);
+// console.log('Лишний вызов: ', generator.next().value);

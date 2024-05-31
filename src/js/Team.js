@@ -16,6 +16,7 @@ export default class Team {
     characters.forEach((character) => this.members.add(character));
   }
 
+  // итератор (задача №1):
   [Symbol.iterator]() {
     let index = -1;
     const list = [...this.members]; // внутри next доступа к this.members уже не будет!
@@ -30,5 +31,14 @@ export default class Team {
         };
       },
     };
+  }
+
+  // генератор (задача №2):
+  * [Symbol.iterator]() {
+    // это генератор; здесь есть доступ к this; надо только верно написать yield
+    /* eslint-disable-next-line */
+    for (const obj of [...this.members]) {
+      yield obj;
+    }
   }
 }
