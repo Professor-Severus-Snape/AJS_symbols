@@ -1,5 +1,7 @@
 # Домашнее задание к лекции «Символы, итераторы, генераторы»
 
+[![Build status](https://ci.appveyor.com/api/projects/status/1ttdlkhe3rme9tug?svg=true)](https://ci.appveyor.com/project/Professor-Severus-Snape/ajs-symbols)
+
 ## Важно:
 1. Код должен проходить ESLint без ошибок.
 2. На задачи данного раздела писать авто-тесты не нужно.
